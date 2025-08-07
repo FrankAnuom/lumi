@@ -29,33 +29,39 @@ function Home() {
     fetchImages();
   }, []);
 
-  return (
-    <div className="w-full max-w-6xl mx-auto mt-6 min-h-screen">
-      <Navbar onSearchChange={handleSearchChange} />
-
-      <div className=" grid grid-cols-2 md:grid-cols-3 gap-2 m-2">
-        {images
-          .filter((img) =>
-            img.image_name.toLowerCase().includes(searchTerm.toLowerCase())
-          )
-          .map((img) => (
-            <div
-              key={img.id}
-              className="shadow rounded overflow-hidden bg-white"
-            >
-              <img
-                src={img.image_url}
-                alt={img.image_name}
-                className="w-full h-50 object-cover"
-              />
-              <p className="p-2 text-center font-semibold text-sm truncate text-black">
-                {img.image_name}
-              </p>
-            </div>
-          ))}
+  
+    return (
+      <div className="min-h-screen flex flex-col"> {/* Full screen height and flex column */}
+        <Navbar onSearchChange={handleSearchChange} />
+    
+        <main className="flex-grow w-full max-w-6xl mx-auto mt-6">
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-2 m-2">
+            {images
+              .filter((img) =>
+                img.image_name.toLowerCase().includes(searchTerm.toLowerCase())
+              )
+              .map((img) => (
+                <div
+                  key={img.id}
+                  className="shadow rounded overflow-hidden bg-white"
+                >
+                  <img
+                    src={img.image_url}
+                    alt={img.image_name}
+                    className="w-full h-50 object-cover"
+                  />
+                  <p className="p-2 text-center font-semibold text-sm truncate text-black">
+                    {img.image_name}
+                  </p>
+                </div>
+              ))}
+          </div>
+        </main>
+    
+        <Footer /> {/* This will stay at the bottom when page is short */}
       </div>
-      <Footer />
-    </div>
+    
+    
   );
 }
 
