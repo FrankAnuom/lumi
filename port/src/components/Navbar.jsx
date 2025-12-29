@@ -11,7 +11,7 @@ function Navbar({ onSearchChange }) {
 
   return (
     <div className="navbar bg-base-100 shadow-sm justify-between">
-      <h1 className="font-bold text-xl ">Lumicho</h1>
+      <h1 className="font-bold text-xl ">Design by Lumi</h1>
       <div className="flex-1 flex justify-end">
         <label className="input w-1/2">
           <input
