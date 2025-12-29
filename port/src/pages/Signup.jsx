@@ -49,7 +49,7 @@ function Signup() {
       <div className="hero bg-base-200 min-h-screen">
         <div className="hero-content flex-col">
           <div className="text-center">
-            <h1 className="text-5xl font-bold">Welcome Lumicho</h1>
+            <h1 className="text-5xl font-bold">Design by Lumi</h1>
             <p className="py-3">
               {isSignUp ? "Sign Up" : "Log In"} to continue
             </p>
