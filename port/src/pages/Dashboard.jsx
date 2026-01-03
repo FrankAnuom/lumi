@@ -30,7 +30,7 @@ function Dashboard() {
     );
 
     const uploadImageURL = await res.json();
-    const imageUrl = uploadImageURL.url;
+    const imageUrl = uploadImageURL.url.replace(/^http:\/\//i, 'https://');
     console.log(uploadImageURL.url);
 
     const { error } = await supabase.from("images").insert([
