@@ -1,6 +1,9 @@
 import { createClient } from '@supabase/supabase-js'
 
-const supabaseUrl = 'https://hqyyswydneiucbhldrqr.supabase.co'
-const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImhxeXlzd3lkbmVpdWNiaGxkcnFyIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTQ0MDUzMDMsImV4cCI6MjA2OTk4MTMwM30.ekOS5LPLAZJgdPBzORm0BCk9M8DY-DRmouuBcpchr-E'
+// 1. We constructed this URL using the ID from the link you just sent
+const supabaseUrl = 'https://pxrwrmsywkobaxmjcody.supabase.co'
+
+// 2. This is the key you sent earlier
+const supabaseKey = 'sb_publishable_8jwu9sE2Sh3GRkj68qrcOg_ch89mazu'
 
 export const supabase = createClient(supabaseUrl, supabaseKey)
